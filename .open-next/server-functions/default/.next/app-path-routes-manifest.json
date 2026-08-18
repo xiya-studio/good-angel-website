@@ -4,6 +4,7 @@
   "/about/page": "/about",
   "/career/page": "/career",
   "/contact/page": "/contact",
+  "/icon.png/route": "/icon.png",
   "/page": "/",
   "/services/page": "/services",
   "/team/page": "/team"

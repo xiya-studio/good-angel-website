@@ -23,6 +23,10 @@ export const metadata: Metadata = {
   description:
     "好天使不動產財商團隊結合不動產實務、財商教育與人才培育，陪伴學員建立購屋判斷、稅務處理與財產規劃能力。",
 
+  alternates: {
+    canonical: "https://good-angel.com",
+  },
+
   openGraph: {
     title: "好天使不動產財商團隊",
     description:
@@ -31,10 +35,6 @@ export const metadata: Metadata = {
     siteName: "好天使不動產財商團隊",
     locale: "zh_TW",
     type: "website",
-  },
-
-  alternates: {
-    canonical: "https://good-angel.com",
   },
 };
 
