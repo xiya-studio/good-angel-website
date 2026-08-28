@@ -10,9 +10,11 @@ export default function ServicesPage() {
 
       <main>
         <PageHero
-          eyebrow="OUR SERVICES"
-          title="我們提供的專業學習內容"
-          description="從購屋策略、稅務觀念到資產配置，建立完整的不動產財商思維。"
+          eyebrow="OUR EXPERTISE"
+          title="專業，從理解到實踐"
+          description="從不動產實務、財商思維到專業成長，我們把知識、經驗與團隊交流串成一條能持續累積的成長路徑。"
+          number="02"
+          backgroundText="EXPERTISE"
         />
 
         <Services />

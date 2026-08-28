@@ -13,6 +13,8 @@ export default function ContactPage() {
           eyebrow="CONTACT US"
           title="與我們聯絡"
           description="無論你想進一步了解好天使、加入團隊，或洽詢合作相關事宜，都歡迎透過電話或 Email 與我們聯繫。"
+          number="05"
+          backgroundText="CONTACT"
         />
 
         <Contact />

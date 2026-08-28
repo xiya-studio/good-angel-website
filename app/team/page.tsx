@@ -13,6 +13,8 @@ export default function TeamPage() {
           eyebrow="OUR PEOPLE"
           title="認識我們的團隊"
           description="來自不同背景與專業領域的夥伴，在交流、協作與實務累積中彼此學習，一起建立屬於好天使的團隊文化。"
+          number="03"
+          backgroundText="PEOPLE"
         />
 
         <Team />

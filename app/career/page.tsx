@@ -1,4 +1,9 @@
+"use client";
+
+import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
 import Navbar from "@/components/Navbar";
 import PageHero from "@/components/PageHero";
 import Footer from "@/components/Footer";
@@ -37,141 +42,290 @@ export default function CareerPage() {
       <Navbar />
 
       <main>
-        {/* Page Hero */}
+        {/* =====================================================
+            PAGE HERO
+        ===================================================== */}
         <PageHero
           eyebrow="JOIN GOOD ANGEL"
           title="加入好天使"
           description="我們正在尋找願意學習、願意交流，也願意和團隊一起成長的夥伴。你的起點不必相同，但我們可以朝同一個方向前進。"
         />
 
-        {/* Who We Are Looking For */}
-        <section className="bg-ivory">
-          <div className="container-shell section-space">
-            <div className="grid gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
+        {/* =====================================================
+            WHO WE ARE LOOKING FOR
+        ===================================================== */}
+        <section className="relative overflow-hidden bg-ivory text-brand-900">
+          {/* Background word */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-10 top-10 select-none text-[clamp(7rem,18vw,18rem)] font-semibold leading-none tracking-[-0.07em] text-brand-900/[0.025]"
+          >
+            PEOPLE
+          </div>
+
+          <div className="container-shell relative py-24 md:py-32 lg:py-36">
+            <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-24">
+              {/* LEFT */}
               <div>
-                <div className="flex items-center gap-4">
+                <motion.div
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.7,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  className="flex items-center gap-4"
+                >
                   <span className="h-px w-8 bg-gold" />
 
-                  <p className="text-xs font-medium tracking-[0.25em] text-gold">
+                  <p className="text-[10px] font-semibold tracking-[0.28em] text-gold">
                     WHO WE ARE LOOKING FOR
                   </p>
+                </motion.div>
+
+                {/* Career Image */}
+                <motion.div
+                  initial={{ opacity: 0, y: 35 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.9,
+                    delay: 0.08,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  className="relative mt-10 aspect-[4/5] w-full overflow-hidden bg-brand-900/5"
+                >
+                  <Image
+                    src="/images/career-team.png"
+                    alt="好天使團隊交流與職涯成長"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 42vw"
+                    className="object-cover object-center transition-transform duration-[1400ms] hover:scale-[1.025]"
+                  />
+
+                  <div className="pointer-events-none absolute inset-0 bg-brand-900/10" />
+
+                  <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-900/75 via-brand-900/15 to-transparent px-6 pb-6 pt-24">
+                    <div className="flex items-end justify-between">
+                      <div>
+                        <p className="text-[9px] font-medium tracking-[0.28em] text-gold">
+                          PEOPLE · LEARNING · GROWTH
+                        </p>
+
+                        <p className="mt-2 text-sm text-white/70">
+                          GOOD ANGEL · TAICHUNG
+                        </p>
+                      </div>
+
+                      <span className="text-[10px] tracking-[0.2em] text-white/60">
+                        01
+                      </span>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+
+              {/* RIGHT */}
+              <div className="lg:pt-16">
+                <motion.div
+                  initial={{ opacity: 0, y: 45 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.25 }}
+                  transition={{
+                    duration: 0.9,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                >
+                  <h2 className="max-w-4xl text-3xl font-semibold leading-[1.28] tracking-[-0.035em] md:text-5xl lg:text-6xl">
+                    我們在找的，
+                    <br />
+                    <span className="text-brand-600">不只是漂亮的履歷。</span>
+                  </h2>
+
+                  <p className="mt-8 max-w-3xl text-base leading-8 text-muted md:text-lg md:leading-9">
+                    經驗與專業可以持續累積。
+                    比起一開始就什麼都會，我們更在意一個人面對新事物的態度，
+                    以及是否願意與團隊共同前進。
+                  </p>
+                </motion.div>
+
+                <div className="mt-14 border-t border-brand-900/15">
+                  {qualities.map((item, index) => (
+                    <motion.article
+                      key={item.number}
+                      initial={{ opacity: 0, y: 35 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, amount: 0.3 }}
+                      transition={{
+                        duration: 0.75,
+                        delay: index * 0.08,
+                        ease: [0.22, 1, 0.36, 1],
+                      }}
+                      className="group relative border-b border-brand-900/15 py-9"
+                    >
+                      <div className="absolute inset-0 origin-left scale-x-0 bg-brand-900/[0.025] transition-transform duration-700 group-hover:scale-x-100" />
+
+                      <div className="relative grid gap-5 md:grid-cols-[80px_0.75fr_1.25fr] md:items-start">
+                        <span className="font-serif text-4xl font-light text-gold">
+                          {item.number}
+                        </span>
+
+                        <h3 className="text-2xl font-semibold tracking-tight transition-colors duration-300 group-hover:text-brand-600">
+                          {item.title}
+                        </h3>
+
+                        <p className="leading-8 text-muted">
+                          {item.description}
+                        </p>
+                      </div>
+
+                      <span className="absolute bottom-0 left-0 h-px w-0 bg-gold transition-all duration-700 group-hover:w-full" />
+                    </motion.article>
+                  ))}
                 </div>
               </div>
-
-              <div>
-                <h2 className="max-w-4xl text-3xl font-semibold leading-[1.35] tracking-[-0.03em] text-brand-900 md:text-5xl">
-                  我們在找的，
-                  <br />
-                  <span className="text-brand-600">不只是漂亮的履歷。</span>
-                </h2>
-
-                <p className="mt-7 max-w-3xl text-base leading-8 text-muted md:text-lg">
-                  經驗與專業可以持續累積。
-                  比起一開始就什麼都會，我們更在意一個人面對新事物的態度，
-                  以及是否願意與團隊共同前進。
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-16 grid border-t border-brand-900/15 md:grid-cols-3">
-              {qualities.map((item) => (
-                <article
-                  key={item.number}
-                  className="group border-b border-brand-900/15 py-9 md:border-r md:px-8 md:py-12 md:first:pl-0 md:last:border-r-0 md:last:pr-0"
-                >
-                  <span className="text-xs font-medium tracking-[0.2em] text-gold">
-                    {item.number}
-                  </span>
-
-                  <h3 className="mt-8 text-2xl font-semibold tracking-tight text-brand-900">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-5 leading-8 text-muted">
-                    {item.description}
-                  </p>
-
-                  <div className="mt-8 h-px w-8 bg-gold transition-all duration-500 group-hover:w-16" />
-                </article>
-              ))}
             </div>
           </div>
         </section>
 
-        {/* What You Will Explore */}
-        <section className="bg-paper">
-          <div className="container-shell section-space">
-            <div className="grid gap-14 lg:grid-cols-2 lg:gap-24">
-              <div>
+        {/* =====================================================
+            WHAT YOU WILL EXPLORE
+        ===================================================== */}
+        <section className="relative overflow-hidden bg-paper text-brand-900">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -left-6 bottom-[-3rem] select-none text-[clamp(7rem,20vw,20rem)] font-semibold leading-none tracking-[-0.07em] text-brand-900/[0.02]"
+          >
+            GROW
+          </div>
+
+          <div className="container-shell relative py-24 md:py-32 lg:py-36">
+            <div className="grid gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:gap-24">
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{
+                  duration: 0.9,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+              >
                 <div className="flex items-center gap-4">
                   <span className="h-px w-8 bg-gold" />
 
-                  <p className="text-xs font-medium tracking-[0.25em] text-gold">
+                  <p className="text-[10px] font-semibold tracking-[0.28em] text-gold">
                     WHAT YOU WILL EXPLORE
                   </p>
                 </div>
 
-                <h2 className="mt-6 max-w-2xl text-3xl font-semibold leading-[1.35] tracking-[-0.03em] text-brand-900 md:text-5xl">
+                <h2 className="mt-7 max-w-2xl text-3xl font-semibold leading-[1.3] tracking-[-0.035em] md:text-5xl">
                   在這裡，
                   <br />
                   <span className="text-brand-600">專業從實際參與開始。</span>
                 </h2>
 
-                <p className="mt-7 max-w-xl leading-8 text-muted">
+                <p className="mt-8 max-w-xl text-base leading-8 text-muted md:text-lg md:leading-9">
                   好天使結合不動產實務、財商教育與人才培育。
                   在參與團隊的過程中，你會逐步接觸不同領域的知識與經驗。
                 </p>
-              </div>
+              </motion.div>
 
               <div className="border-t border-brand-900/15">
                 {areas.map((item, index) => (
-                  <div
+                  <motion.div
                     key={item}
-                    className="flex items-center gap-6 border-b border-brand-900/15 py-7"
+                    initial={{ opacity: 0, x: 35 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.4 }}
+                    transition={{
+                      duration: 0.7,
+                      delay: index * 0.08,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
+                    className="group relative flex items-center justify-between gap-6 border-b border-brand-900/15 py-8"
                   >
-                    <span className="text-xs tracking-[0.2em] text-gold">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
+                    <div className="flex items-center gap-6">
+                      <span className="font-serif text-3xl font-light text-gold">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
 
-                    <p className="text-lg font-medium text-brand-900 md:text-xl">
-                      {item}
-                    </p>
-                  </div>
+                      <p className="text-lg font-medium transition-colors duration-300 group-hover:text-brand-600 md:text-xl">
+                        {item}
+                      </p>
+                    </div>
+
+                    <span className="text-xl text-gold transition-transform duration-300 group-hover:translate-x-2">
+                      →
+                    </span>
+                  </motion.div>
                 ))}
               </div>
             </div>
           </div>
         </section>
 
-        {/* Recruitment CTA */}
-        <section className="bg-brand-900 text-ivory">
-          <div className="container-shell py-20 md:py-24">
-            <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
-              <div>
-                <p className="text-xs font-medium tracking-[0.25em] text-gold">
+        {/* =====================================================
+            RECRUITMENT CTA
+        ===================================================== */}
+        <section className="relative overflow-hidden bg-brand-900 text-ivory">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute bottom-[-2vw] left-1/2 -translate-x-1/2 select-none whitespace-nowrap text-[clamp(5rem,14vw,14rem)] font-semibold leading-none tracking-[-0.06em] text-white/[0.025]"
+          >
+            JOIN US
+          </div>
+
+          <div className="container-shell relative py-24 md:py-28 lg:py-32">
+            <div className="grid gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:items-end lg:gap-24">
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.9,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+              >
+                <p className="text-[10px] font-semibold tracking-[0.28em] text-gold">
                   START YOUR NEXT CHAPTER
                 </p>
 
-                <h2 className="mt-6 max-w-4xl text-4xl font-semibold leading-[1.2] tracking-[-0.04em] md:text-6xl">
+                <h2 className="mt-7 max-w-4xl text-4xl font-semibold leading-[1.18] tracking-[-0.045em] md:text-6xl">
                   如果你也想看看，
                   <br />
                   <span className="text-brand-200">自己還能走到哪裡。</span>
                 </h2>
-              </div>
+              </motion.div>
 
-              <div>
-                <p className="max-w-xl leading-8 text-white/60">
-                  想進一步了解團隊、工作機會或加入方式， 歡迎直接與好天使聯絡。
+              <motion.div
+                initial={{ opacity: 0, y: 35 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.8,
+                  delay: 0.15,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+              >
+                <p className="max-w-xl text-base leading-8 text-white/60">
+                  想進一步了解團隊、工作機會或加入方式，歡迎直接與好天使聯絡。
                 </p>
 
                 <Link
                   href="/contact"
-                  className="mt-8 inline-flex items-center gap-12 bg-[#c7d98f] px-7 py-4 text-sm font-semibold text-[#1f3326] transition duration-300 hover:bg-brand-200"
+                  className="group mt-9 inline-flex min-w-[210px] items-center justify-between bg-[#c7d98f] px-7 py-4 text-sm font-semibold tracking-wide text-[#1f3326] transition-all duration-300 hover:bg-[#dbe8b4]"
                 >
                   <span>與我們聯絡</span>
-                  <span aria-hidden="true">↗</span>
+
+                  <span
+                    aria-hidden="true"
+                    className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
+                  >
+                    ↗
+                  </span>
                 </Link>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
