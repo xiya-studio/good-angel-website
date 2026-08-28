@@ -155,7 +155,7 @@ export default function Navbar() {
               aria-hidden="true"
               className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
             >
-              ↗
+              {"↗\uFE0E"}
             </span>
           </span>
         </Link>
@@ -233,7 +233,7 @@ export default function Navbar() {
               aria-hidden="true"
               className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
             >
-              ↗
+              {"↗\uFE0E"}
             </span>
           </Link>
         </nav>

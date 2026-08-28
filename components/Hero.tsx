@@ -168,7 +168,7 @@ export default function Hero() {
                       aria-hidden="true"
                       className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
                     >
-                      ↗
+                      {"↗\uFE0E"}
                     </span>
                   </Link>
 

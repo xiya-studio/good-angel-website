@@ -219,7 +219,7 @@ export default function Team() {
 
                 {/* arrow */}
                 <div className="absolute bottom-5 right-5 flex h-11 w-11 translate-y-3 items-center justify-center bg-brand-900 text-ivory opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                  ↗
+                  {"↗\uFE0E"}
                 </div>
 
                 {/* gold line */}

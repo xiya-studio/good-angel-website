@@ -166,7 +166,7 @@ export default function Contact() {
                     </p>
 
                     <span className="text-xl text-white/30 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-gold">
-                      ↗
+                      {"↗\uFE0E"}
                     </span>
                   </div>
 
@@ -229,7 +229,7 @@ export default function Contact() {
                 <span>開啟地圖</span>
 
                 <span className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
-                  ↗
+                  {"↗\uFE0E"}
                 </span>
               </a>
             </div>
