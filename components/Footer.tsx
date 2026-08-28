@@ -102,7 +102,7 @@ export default function Footer() {
                   </div>
 
                   <span className="relative text-lg text-white/25 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-gold">
-                    ↗
+                    {"↗\uFE0E"}
                   </span>
                 </Link>
               </motion.div>
@@ -130,7 +130,7 @@ export default function Footer() {
               </p>
 
               <span className="absolute right-0 top-1/2 hidden -translate-y-1/2 text-4xl text-gold opacity-0 transition-all duration-500 group-hover:-translate-y-[65%] group-hover:translate-x-2 group-hover:opacity-100 md:block">
-                ↗
+                {"↗\uFE0E"}
               </span>
             </motion.div>
           </Link>
