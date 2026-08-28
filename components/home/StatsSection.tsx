@@ -66,7 +66,7 @@ export default function StatsSection() {
                   </span>
 
                   <span className="translate-x-2 text-brand-900/20 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
-                    ↗
+                    {"↗\uFE0E"}
                   </span>
                 </div>
 

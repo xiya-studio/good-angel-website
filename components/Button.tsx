@@ -29,7 +29,8 @@ export default function Button({
     text: "border-b border-brand-900 px-0 py-2 text-brand-900 hover:border-gold hover:text-brand-600",
   };
 
-  const arrowSymbol = arrow === "up" ? "↗" : arrow === "right" ? "→" : null;
+  const arrowSymbol =
+    arrow === "up" ? "↗\uFE0E" : arrow === "right" ? "→\uFE0E" : null;
 
   return (
     <Link href={href} className={`${base} ${variants[variant]} ${className}`}>

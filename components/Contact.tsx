@@ -129,7 +129,7 @@ export default function Contact() {
                 <span>了解加入方式</span>
 
                 <span className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
-                  ↗
+                  {"↗\uFE0E"}
                 </span>
               </Link>
             </motion.div>
