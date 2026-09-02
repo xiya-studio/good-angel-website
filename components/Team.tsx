@@ -181,7 +181,7 @@ export default function Team() {
                 delay: (index % 3) * 0.1,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className={`group ${index % 3 === 1 ? "lg:translate-y-16" : ""}`}
+              className={`group ${index % 3 === 1 ? "lg:translate-y-3" : ""}`}
             >
               {/* PHOTO */}
               <div className="relative aspect-[4/5] overflow-hidden bg-brand-100">
@@ -315,7 +315,7 @@ export default function Team() {
                   <span>認識團隊</span>
 
                   <span className="transition-transform duration-300 group-hover:translate-x-2">
-                    →
+                    {"→\uFE0E"}
                   </span>
                 </Link>
               </motion.div>

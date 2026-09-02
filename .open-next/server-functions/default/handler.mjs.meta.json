@@ -4296,7 +4296,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/chunks/ssr/_05gr4o1._.js": {
-      "bytes": 287750,
+      "bytes": 287765,
       "imports": [],
       "format": "cjs"
     },
@@ -4348,7 +4348,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/chunks/ssr/_0zojgtp._.js": {
-      "bytes": 287750,
+      "bytes": 287765,
       "imports": [],
       "format": "cjs"
     },
@@ -8074,7 +8074,7 @@
           "bytesInOutput": 5992
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/_05gr4o1._.js": {
-          "bytesInOutput": 309274
+          "bytesInOutput": 309289
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/_0kqn21g._.js": {
           "bytesInOutput": 10624
@@ -8098,7 +8098,7 @@
           "bytesInOutput": 13455
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/_0zojgtp._.js": {
-          "bytesInOutput": 309275
+          "bytesInOutput": 309290
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_career_page_actions_0u7b4zp.js": {
           "bytesInOutput": 262
@@ -8368,7 +8368,7 @@
           "bytesInOutput": 60049
         }
       },
-      "bytes": 5318062
+      "bytes": 5318092
     }
   }
 }
