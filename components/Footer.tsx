@@ -125,7 +125,7 @@ export default function Footer() {
               }}
               className="relative py-10 md:py-12"
             >
-              <p className="select-none whitespace-nowrap text-[clamp(3.8rem,11.5vw,11rem)] font-semibold leading-[0.86] tracking-[-0.04em] text-white transition-colors duration-700 group-hover:text-brand-200">
+              <p className="select-none whitespace-nowrap text-[10.5vw] font-semibold leading-[0.86] tracking-[-0.04em] text-white transition-colors duration-700 group-hover:text-brand-200 md:text-[clamp(5rem,11.5vw,11rem)]">
                 GOOD ANGEL
               </p>
 
