@@ -92,7 +92,7 @@ export default function Navbar() {
 
               <p
                 className={`text-[9px] font-medium tracking-[0.22em] transition-colors duration-500 ${
-                  isHomeTop ? "text-white/50" : "text-muted"
+                  isHomeTop ? "text-white/65" : "text-muted"
                 }`}
               >
                 GOOD ANGEL
@@ -116,7 +116,7 @@ export default function Navbar() {
                   isHomeTop
                     ? isActive
                       ? "text-white"
-                      : "text-white/60 hover:text-white"
+                      : "text-white/80 hover:text-white"
                     : isActive
                       ? "text-brand-900"
                       : "text-muted hover:text-brand-900"
@@ -151,7 +151,13 @@ export default function Navbar() {
             }`}
           />
 
-          <span className="relative z-10 flex items-center gap-3 transition-colors duration-300 group-hover:text-brand-900">
+          <span
+            className={`relative z-10 flex items-center gap-3 transition-colors duration-300 ${
+              isHomeTop
+                ? "text-brand-900 group-hover:text-brand-900"
+                : "text-white group-hover:text-brand-900"
+            }`}
+          >
             加入我們
             <span
               aria-hidden="true"
@@ -218,7 +224,7 @@ export default function Navbar() {
                 </div>
 
                 <span className="text-muted transition-transform duration-300 group-hover:translate-x-1">
-                  →
+                  {"→\uFE0E"}
                 </span>
               </Link>
             );
