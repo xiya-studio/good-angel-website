@@ -20,7 +20,7 @@ export default function Button({
     "group relative inline-flex items-center justify-between gap-8 overflow-hidden px-7 py-4 text-sm font-semibold tracking-wide transition-all duration-500";
 
   const variants = {
-    primary: "bg-[#c7d98f] text-brand-900 hover:bg-[#dbe8b4]",
+    primary: "bg-yellow text-brand-900 hover:bg-yellow-hover",
 
     dark: "bg-brand-900 text-ivory hover:bg-brand-800",
 

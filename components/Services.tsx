@@ -277,7 +277,7 @@ export default function Services() {
 
               <Link
                 href="/career"
-                className="group mt-10 inline-flex min-w-[220px] items-center justify-between bg-[#c7d98f] px-7 py-4 text-sm font-semibold tracking-wide text-brand-900 transition-colors duration-300 hover:bg-[#dbe8b4]"
+                className="group mt-10 inline-flex min-w-[220px] items-center justify-between bg-yellow px-7 py-4 text-sm font-semibold tracking-wide text-brand-900 transition-colors duration-300 hover:bg-yellow-hover"
               >
                 <span>加入好天使</span>
 

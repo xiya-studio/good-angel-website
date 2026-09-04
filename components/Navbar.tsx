@@ -142,14 +142,16 @@ export default function Navbar() {
         <Link
           href="/career"
           className={`group relative hidden overflow-hidden px-6 py-3 text-sm font-medium tracking-wide transition-all duration-500 lg:inline-flex ${
-            isHomeTop
-              ? "bg-[#c7d98f] text-brand-900"
-              : "bg-brand-900 text-ivory"
+            isHomeTop ? "bg-yellow text-brand-900" : "bg-brand-900 text-white"
           }`}
         >
-          <span className="absolute inset-0 translate-y-full bg-brand-800 transition-transform duration-500 group-hover:translate-y-0" />
+          <span
+            className={`absolute inset-0 translate-y-full transition-transform duration-500 group-hover:translate-y-0 ${
+              isHomeTop ? "bg-yellow-hover" : "bg-yellow"
+            }`}
+          />
 
-          <span className="relative z-10 flex items-center gap-3 transition-colors duration-300 group-hover:text-white">
+          <span className="relative z-10 flex items-center gap-3 transition-colors duration-300 group-hover:text-brand-900">
             加入我們
             <span
               aria-hidden="true"

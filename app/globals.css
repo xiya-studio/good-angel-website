@@ -1,21 +1,32 @@
 @import "tailwindcss";
 
 :root {
-  /* Brand Colors */
-  --brand-900: #243329;
-  --brand-800: #304b35;
-  --brand-600: #66734d;
+  /* =========================================================
+     GOOD ANGEL BRAND COLORS
+     Deep Navy × Gold × Yellow
+  ========================================================= */
 
-  --brand-200: #dbe8b4;
-  --brand-100: #edf2d8;
+  /* Navy */
+  --brand-900: #012b51;
+  --brand-800: #174163;
+  --brand-600: #3f6684;
 
+  /* Light Navy */
+  --brand-200: #c9d8e4;
+  --brand-100: #e7eef3;
+
+  /* Neutral */
   --ivory: #f7f5ef;
   --paper: #fbfaf6;
 
-  --ink: #20261f;
-  --muted: #667066;
+  /* Typography */
+  --ink: #10263a;
+  --muted: #687987;
 
-  --gold: #ad9564;
+  /* Accent */
+  --gold: #d2a337;
+  --yellow: #fbd84b;
+  --yellow-hover: #e7d336;
 
   /* App Colors */
   --background: var(--paper);
@@ -38,7 +49,10 @@
 
   --color-ink: var(--ink);
   --color-muted: var(--muted);
+
   --color-gold: var(--gold);
+  --color-yellow: var(--yellow);
+  --color-yellow-hover: var(--yellow-hover);
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -69,7 +83,7 @@ body {
 }
 
 ::selection {
-  background: var(--brand-200);
+  background: var(--yellow);
   color: var(--brand-900);
 }
 

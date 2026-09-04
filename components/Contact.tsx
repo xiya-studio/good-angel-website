@@ -124,7 +124,7 @@ export default function Contact() {
 
               <Link
                 href="/career"
-                className="group inline-flex min-w-[230px] items-center justify-between bg-[#c7d98f] px-7 py-4 text-sm font-semibold tracking-wide text-brand-900 transition-all duration-300 hover:bg-[#dbe8b4]"
+                className="group inline-flex min-w-[230px] items-center justify-between bg-yellow px-7 py-4 text-sm font-semibold tracking-wide text-brand-900 transition-all duration-300 hover:bg-yellow-hover"
               >
                 <span>了解加入方式</span>
 

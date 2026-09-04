@@ -111,7 +111,7 @@ export default function Team() {
           className="pointer-events-none absolute inset-0 opacity-[0.08]"
           style={{
             backgroundImage:
-              "linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px)",
+              "linear-gradient(rgba(1,43,81,.5) 1px, transparent 1px), linear-gradient(90deg, rgba(1,43,81,.5) 1px, transparent 1px)",
             backgroundSize: "80px 80px",
           }}
         />
@@ -207,7 +207,7 @@ export default function Team() {
                   className="pointer-events-none absolute inset-0 opacity-[0.08]"
                   style={{
                     backgroundImage:
-                      "linear-gradient(rgba(48,75,53,.5) 1px, transparent 1px), linear-gradient(90deg, rgba(48,75,53,.5) 1px, transparent 1px)",
+                      "linear-gradient(rgba(1,43,81,.5) 1px, transparent 1px), linear-gradient(90deg, rgba(1,43,81,.5) 1px, transparent 1px)",
                     backgroundSize: "48px 48px",
                   }}
                 />
@@ -256,7 +256,7 @@ export default function Team() {
       {/* =========================================================
           04 / CULTURE STATEMENT
       ========================================================= */}
-      <div className="relative overflow-hidden bg-[#c7d98f]">
+      <div className="relative overflow-hidden bg-yellow">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -bottom-10 left-0 whitespace-nowrap text-[clamp(8rem,20vw,20rem)] font-semibold leading-none tracking-[-0.07em] text-brand-900/[0.035]"

@@ -160,7 +160,7 @@ export default function Hero() {
                 >
                   <Link
                     href="/career"
-                    className="group inline-flex min-w-[190px] items-center justify-between bg-[#c7d98f] px-7 py-4 text-sm font-semibold tracking-wide text-[#1f3326] transition-all duration-300 hover:bg-[#dbe8b4]"
+                    className="group inline-flex min-w-[190px] items-center justify-between bg-yellow px-7 py-4 text-sm font-semibold tracking-wide text-[#1f3326] transition-all duration-300 hover:bg-yellow-hover"
                   >
                     <span>加入好天使</span>
 
