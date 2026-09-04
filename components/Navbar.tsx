@@ -92,7 +92,7 @@ export default function Navbar() {
 
               <p
                 className={`text-[9px] font-medium tracking-[0.22em] transition-colors duration-500 ${
-                  isHomeTop ? "text-white/65" : "text-muted"
+                  isHomeTop ? "text-white/75" : "text-muted"
                 }`}
               >
                 GOOD ANGEL
@@ -114,9 +114,7 @@ export default function Navbar() {
                 href={item.href}
                 className={`group relative flex items-start gap-1.5 py-3 text-sm font-medium tracking-wide transition-colors duration-300 ${
                   isHomeTop
-                    ? isActive
-                      ? "text-white"
-                      : "text-white/80 hover:text-white"
+                    ? "text-white hover:text-yellow"
                     : isActive
                       ? "text-brand-900"
                       : "text-muted hover:text-brand-900"
