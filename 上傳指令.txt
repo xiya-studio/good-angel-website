@@ -1,4 +1,0 @@
-git add .
-git commit -m "fix iOS arrow rendering"
-git push
-npm run deploy

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -187,56 +188,128 @@ export default function Contact() {
       </div>
 
       {/* =======================================================
-          03 / OFFICE
-      ======================================================= */}
-      <div className="container-shell relative py-20 md:py-28">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 0.9,
-            ease: [0.22, 1, 0.36, 1],
-          }}
-          className="grid gap-12 lg:grid-cols-[0.5fr_1.5fr]"
-        >
-          <div>
-            <p className="text-[10px] font-semibold tracking-[0.3em] text-gold">
-              OFFICE
-            </p>
+    03 / OUR OFFICE
+======================================================= */}
+      <div className="relative border-b border-white/15">
+        <div className="container-shell relative py-20 md:py-28 lg:py-32">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.9,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+          >
+            {/* Office heading */}
+            <div className="grid gap-10 lg:grid-cols-[0.5fr_1.5fr] lg:gap-12">
+              <div>
+                <div className="flex items-center gap-4">
+                  <span className="h-px w-10 bg-gold" />
 
-            <p className="mt-4 text-[9px] tracking-[0.25em] text-white/25">
-              TAICHUNG / TAIWAN
-            </p>
-          </div>
+                  <p className="text-[10px] font-semibold tracking-[0.3em] text-gold">
+                    OUR OFFICE
+                  </p>
+                </div>
 
-          <div>
-            <p className="max-w-4xl text-3xl font-medium leading-[1.4] tracking-[-0.03em] text-white md:text-5xl">
-              臺中市北屯區
-              <br />
-              文心路四段 61 號
-            </p>
+                <p className="mt-4 text-[9px] tracking-[0.25em] text-white/25">
+                  TAICHUNG / TAIWAN
+                </p>
+              </div>
 
-            <div className="mt-10 flex flex-col justify-between gap-8 border-t border-white/15 pt-7 md:flex-row md:items-center">
-              <p className="text-sm text-white/40">Taichung City, Taiwan</p>
+              <div>
+                <p className="max-w-4xl text-3xl font-medium leading-[1.4] tracking-[-0.03em] text-white md:text-5xl">
+                  臺中市北屯區
+                  <br />
+                  文心路四段 61 號
+                </p>
 
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=臺中市北屯區文心路四段61號"
-                target="_blank"
-                rel="noreferrer"
-                className="group inline-flex items-center gap-5 text-sm font-medium text-white/70 transition-colors hover:text-gold"
-              >
-                <span>開啟地圖</span>
+                <div className="mt-10 flex flex-col justify-between gap-8 border-t border-white/15 pt-7 md:flex-row md:items-center">
+                  <p className="text-sm text-white/40">
+                    Good Angel · Taichung City, Taiwan
+                  </p>
 
-                <span className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
-                  {"↗\uFE0E"}
-                </span>
-              </a>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=臺中市北屯區文心路四段61號"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group inline-flex items-center gap-5 text-sm font-medium text-white/70 transition-colors hover:text-gold"
+                  >
+                    <span>開啟地圖</span>
+
+                    <span className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1">
+                      {"↗\uFE0E"}
+                    </span>
+                  </a>
+                </div>
+              </div>
             </div>
-          </div>
-        </motion.div>
-      </div>
 
+            {/* Real office photo */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{
+                duration: 1,
+                delay: 0.15,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="group relative mt-16 overflow-hidden md:mt-20 lg:mt-24"
+            >
+              <div className="relative aspect-[16/10] w-full overflow-hidden md:aspect-[16/9]">
+                <Image
+                  src="/images/office-lobby.jpg"
+                  alt="好天使不動產財商團隊台中辦公室大廳"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 1280px"
+                  className="object-cover transition-transform duration-[1800ms] ease-out group-hover:scale-[1.025]"
+                />
+
+                {/* subtle image treatment */}
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-900/60 via-brand-900/5 to-transparent" />
+
+                {/* Top number */}
+                <div className="absolute right-5 top-5 border border-white/25 bg-brand-900/30 px-4 py-2 backdrop-blur-md md:right-8 md:top-8">
+                  <span className="text-[9px] font-semibold tracking-[0.28em] text-white/75">
+                    03 / OFFICE
+                  </span>
+                </div>
+
+                {/* Bottom caption */}
+                <div className="absolute inset-x-0 bottom-0 flex flex-col justify-between gap-4 p-6 md:flex-row md:items-end md:p-10">
+                  <div>
+                    <p className="text-[9px] font-semibold tracking-[0.32em] text-gold">
+                      GOOD ANGEL
+                    </p>
+
+                    <p className="mt-2 text-xl font-medium text-white md:text-2xl">
+                      我們所在的地方
+                    </p>
+                  </div>
+
+                  <p className="text-[9px] tracking-[0.28em] text-white/55">
+                    TAICHUNG · TAIWAN
+                  </p>
+                </div>
+              </div>
+
+              {/* Gold line */}
+              <motion.div
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 1.2,
+                  delay: 0.35,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                className="h-[2px] origin-left bg-gold"
+              />
+            </motion.div>
+          </motion.div>
+        </div>
+      </div>
       {/* =======================================================
           04 / FINAL BRAND STATEMENT
       ======================================================= */}
